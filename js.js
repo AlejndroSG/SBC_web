@@ -2,7 +2,8 @@ document.addEventListener("DOMContentLoaded", () => {
     let botonBurguer = document.querySelector("div.menu > button");
     let botonCross = document.querySelector(".navbar button");
     let navbar = document.querySelector("div.navbar");
-    console.log(navbar.innerWidt);
+    let header = document.querySelector("header");
+    let logo = document.querySelector("div.brand img");
 
     botonBurguer.addEventListener("click", () => {
         if(window.innerWidth > 500){
@@ -22,4 +23,15 @@ document.addEventListener("DOMContentLoaded", () => {
     botonCross.addEventListener("click", () =>{
         navbar.style.left = "100%";
     })
+    window.addEventListener("scroll", () =>{
+        const scrollPosition = window.scrollY;
+        if (scrollPosition > 0) {
+          header.style.backgroundColor = "transparent";
+          botonBurguer.style.color = "white";
+          logo.setAttribute("src", "./img/Inicio/Logo_Blanco_SCB.png");
+        } else {
+          header.style.backgroundColor = "red";
+          logo.setAttribute("src", "./img/Inicio/Logo_Negro_SCB.png");
+        }
+      })
 })

@@ -2,23 +2,17 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    /* overflow: hidden; */
 }
 a {
     text-decoration: none;
     margin: 20px 0;
-    padding: 5px;
-    color: black;
+    padding: 15px;
+    border-radius: 50px;
     text-transform: uppercase;
     font-weight: bold;
 
     &:nth-child(2) {
         margin-top: 50px;
-    }
-
-    &:hover {
-        background-color: crimson;
-        color: white;
     }
 }
 
@@ -26,58 +20,81 @@ body {
     font-size: 15px;
     font-family: "system-ui";
     overflow-x: hidden;
+    background-color: rgb(16, 14, 14);
 }
 
 header#header {
-    padding: 50px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-
-    div.brand {
+    padding: 25px 50px;
+    background-color: red;
+    transition: background-color 0.5s;
+        
         h1 {
-            font-size: 2rem;
+            font-size: 3rem;
 
             span {
-                color: royalblue;
+                color: white;
                 font-size: larger;
             }
         }
-    }
 
     nav.nav {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        overflow: hidden;
+
+        div.brand{
+            width: 30rem;
+
+            img{
+                max-width: 35%;
+            }
+        }
 
         div.menu {
-            text-align: right;
-
             button {
                 font-size: 2rem;
                 background-color: transparent;
                 border: none;
-                color: royalblue;
+                color:  black;
             }
 
             div.navbar {
                 display: flex;
-                align-items: end;
+                align-items: center;
                 flex-flow: column;
                 min-height: 100vh;
                 min-width: 20%;
                 padding: 20px;
-                background-color: royalblue;
+                background-color: rgb(255, 61, 61);
                 position: absolute;
                 top: 0;
                 left: 100%;
                 transition: left 0.5s;
-                overflow-x: hidden;
                 z-index: 999;
 
-                a{
+                a+a{
                     color: whitesmoke;
+                    &:hover {
+                        background-color: rgb(255, 98, 98);
+                        color: white;
+                        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+                    }
+                }
+
+                &:nth-child(2){
+                    width: 30rem;
+                    text-align: center;
+                    img{
+                        max-width: 50%;
+                    }
                 }
             }
+
         }
     }
+}
+
+#hola{
+    background-color: white;
+    height: 300vh;
 }
