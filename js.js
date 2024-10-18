@@ -30,6 +30,7 @@ document.addEventListener("DOMContentLoaded", () => {
           botonBurguer.style.color = "white";
           logo.setAttribute("src", "./img/Inicio/Logo_Blanco_SCB.png");
         } else {
+          botonBurguer.style.color = "black";
           header.style.backgroundColor = "red";
           logo.setAttribute("src", "./img/Inicio/Logo_Negro_SCB.png");
         }
